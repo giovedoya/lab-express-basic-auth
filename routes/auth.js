@@ -38,4 +38,9 @@ router.post('/signup', async function (req, res, next) {
     }
   });
 
+  /* GET log in view. */
+router.get('/login', function (req, res, next) {
+  res.render('auth/login');
+});
+
   module.exports = router;
