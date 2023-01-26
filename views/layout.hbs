@@ -9,16 +9,19 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <nav>
-      <li><a href="/">Home</a></li>
-      <li><a href="/profile">Profile</a></li>  
-      <li><a href="/auth/signup">Sign up</a></li>
-      <li><a href="/auth/login">Log in</a></li>
-      <li><a href="/auth/logout">Log out</a></li>
-    </nav>
-
+      <ul>
+        {{#if user}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/main">Main</a></li>
+        <li><a href="/private">Private</a></li>
+        <li><a href="/auth/logout">Log out</a></li>
+        {{else}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/auth/signup">Sign up</a></li>
+        <li><a href="/auth/login">Log in</a></li>
+        {{/if}}
+      </ul>
     {{{body}}}
-
     <script src="/js/script.js"></script>
   </body>
 
